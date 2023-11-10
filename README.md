@@ -1,6 +1,6 @@
 # 5G-Spector
 
-[![DOI](https://zenodo.org/badge/712589245.svg)](https://zenodo.org/doi/10.5281/zenodo.10108254)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10108331.svg)](https://doi.org/10.5281/zenodo.10108331)
 
 5G-Spector is the first Open Radio Access Network ([O-RAN](https://www.o-ran.org/)) compliant layer-3 cellular attack detection service. It is based on the revolutionary O-RAN architecture that brings unprecedented programmability that enables stakeholders (e.g., network operators) and researchers to build innovative software-defined services on cellular networks. 5G-Spector is featured in project [SE-RAN](https://5gsec.com) and an academic publication in the Network and Distributed System Security Symposium 2024 ([NDSS 2024](https://www.ndss-symposium.org/ndss2024/)). The full paper is available [here](https://web.cse.ohio-state.edu/~wen.423/papers/5G-Spector-NDSS24.pdf).
 
