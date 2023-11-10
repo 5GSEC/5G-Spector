@@ -27,17 +27,17 @@ control services and connects to the RAN nodes (i.e., CUs and DUs) via the stand
 
 
 
-<!--### Essential Components
+## Source Code Dependencies
 
-Based on the above descriptions, 5G-Spector is dependent on the following two source code repositories (**To Be Released**):
+5G-Spector is dependent on the following two source code repositories:
 
-- [A security-enhanced OAI RAN](https://github.com/5GSEC/OAI-5G) with RIC agent support to generate MobiFlow telemetry. It is currently dedicated from the [ONOS RIC](https://docs.onosproject.org/v0.6.0/onos-cli/docs/cli/onos_ric/) on [SD-RAN](https://docs.sd-ran.org/master/index.html).
-- [The MobieXpert xApp](https://github.com/5GSEC/mobi-expert-xapp) functioning as a L3 exploit signature detection engine.
+### Security-Enhanced OAI RAN
 
-While this artifact demonstrates 5G-Spector over RF simulation, we have also provided a [pre-recorded video](https://www.5gsec.com/post/5g-spector-demo) showing 5G-Spector's capability of detecting two RF attacks targeting a real cellular network.
+[Security-enhanced OAI RAN implementation](https://github.com/5GSEC/OAI-5G) with RIC agent support to generate MobiFlow telemetry. It is currently dedicated from the [ONOS RIC](https://docs.onosproject.org/v0.6.0/onos-cli/docs/cli/onos_ric/) on [SD-RAN](https://docs.sd-ran.org/master/index.html). We plan to extend its support for other platforms and vendors such as the Flexible RAN Intelligent Controller ([FlexRIC](https://gitlab.eurecom.fr/mosaic5g/flexric)).
 
-The rest of this document describes the detailed steps to deploy and evaluate 5G-Spector.
--->
+### MobieXpert xApp
+
+[The MobieXpert xApp](https://github.com/5GSEC/mobi-expert-xapp) functions as a L3 exploit detection engine that allows efficient programming of cellular attack signatures (**Source Code To Be Released**).
 
 
 ## Reproducible Artifact
