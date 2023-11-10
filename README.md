@@ -35,7 +35,7 @@ control services and connects to the RAN nodes (i.e., CUs and DUs) via the stand
 
 ### Security-Enhanced OAI RAN
 
-[Security-enhanced OAI RAN implementation](https://github.com/5GSEC/OAI-5G) with RIC agent support to generate MobiFlow telemetry. It is currently dedicated from the [ONOS RIC](https://docs.onosproject.org/v0.6.0/onos-cli/docs/cli/onos_ric/) on [SD-RAN](https://docs.sd-ran.org/master/index.html). We plan to extend its support for other platforms and vendors such as the Flexible RAN Intelligent Controller ([FlexRIC](https://gitlab.eurecom.fr/mosaic5g/flexric)). It is licensed under [OAI Public License V1.1](https://openairinterface.org/legal/oai-public-license/).
+[Security-enhanced OAI RAN implementation](https://github.com/5GSEC/OAI-5G) with RIC agent support to generate MobiFlow telemetry. It is currently dedicated to the [ONOS RIC](https://docs.onosproject.org/v0.6.0/onos-cli/docs/cli/onos_ric/) on [SD-RAN](https://docs.sd-ran.org/master/index.html). We plan to extend its support to other platforms and vendors such as the Flexible RAN Intelligent Controller ([FlexRIC](https://gitlab.eurecom.fr/mosaic5g/flexric)). It is licensed under [OAI Public License V1.1](https://openairinterface.org/legal/oai-public-license/).
 
 ### MobieXpert xApp
 
