@@ -6,7 +6,7 @@
 
 5G-Spector has passed the NDSS'24 artifact evaluation and is awarded all badges (available, functional, and reproduced). Please checkout our [artifact](#reproducible-artifact)!
 
-![alt text](./figure/badge-AFR.png | width=100)
+[<img src="./figure/badge-AFR.png" width="150" />](./figure/badge-AFR.png)
 
 ## Introduction
 
