@@ -4,7 +4,9 @@
 
 5G-Spector is the first Open Radio Access Network ([O-RAN](https://www.o-ran.org/)) compliant layer-3 cellular attack detection service. It is based on the revolutionary O-RAN architecture that brings unprecedented programmability that enables stakeholders (e.g., network operators) and researchers to build innovative software-defined services on cellular networks. 5G-Spector is featured in project [SE-RAN](https://5gsec.com) and an academic publication in the Network and Distributed System Security Symposium 2024 ([NDSS 2024](https://www.ndss-symposium.org/ndss2024/)). The full paper is available [here](https://web.cse.ohio-state.edu/~wen.423/papers/5G-Spector-NDSS24.pdf).
 
-5G-Spector has passed the NDSS'24 artifact evaluation and is awarded all badges (available, functional, and reproduced). Please checkout our [artifact](#reproducible-artifact)!
+5G-Spector has passed the NDSS'24 artifact evaluation and is awarded all badges (available, functional, and reproduced). Please checkout our [artifact](#reproducible-artifact) as a standalone VM! 
+
+If you would like to build 5G-Spector from scratch, we have also provided guidelines to download, build, and deploy 5G-Spector in a test 5G network. Please checkout this [guide](https://github.com/5GSEC/5G-Spector/wiki/Build-5G%E2%80%90Spector-from-scratch-in-an-OAI-5G-network)! 
 
 [<img src="./figure/badge-AFR.png" width="150" />](./figure/badge-AFR.png)
 
@@ -44,6 +46,11 @@ control services and connects to the RAN nodes (i.e., CUs and DUs) via the stand
 ### MobieXpert xApp
 
 [The MobieXpert xApp](https://github.com/5GSEC/mobi-expert-xapp) functions as a L3 exploit detection engine that allows efficient programming of cellular attack signatures (**Source Code To Be Released**).
+
+## Build 5G-Spector from Scratch
+
+We have provided a guide to download, build, and deploy 5G-Spector in an experimental OAI 5G test network. Please refer to:
+[Build 5G‐Spector from scratch in an OAI 5G network](https://github.com/5GSEC/5G-Spector/wiki/Build-5G%E2%80%90Spector-from-scratch-in-an-OAI-5G-network)
 
 
 ## Reproducible Artifact
