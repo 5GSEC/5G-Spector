@@ -37,7 +37,7 @@ control services and connects to the RAN nodes (i.e., CUs and DUs) via the stand
 
 ## Source Code Dependencies
 
-5G-Spector is dependent on the following two source code repositories:
+5G-Spector is dependent on the following source code repositories:
 
 ### Security-Enhanced OAI RAN
 
