@@ -43,9 +43,14 @@ control services and connects to the RAN nodes (i.e., CUs and DUs) via the stand
 
 [Security-enhanced OAI RAN implementation](https://github.com/5GSEC/OAI-5G) with RIC agent support to generate MobiFlow telemetry. It is currently dedicated to the [ONOS RIC](https://docs.onosproject.org/v0.6.0/onos-cli/docs/cli/onos_ric/) on [SD-RAN](https://docs.sd-ran.org/master/index.html). We plan to extend its support to other platforms and vendors such as the Flexible RAN Intelligent Controller ([FlexRIC](https://gitlab.eurecom.fr/mosaic5g/flexric)). It is licensed under [OAI Public License V1.1](https://openairinterface.org/legal/oai-public-license/).
 
+### MobiFlow Auditor xApp
+
+[The MobiFlow Auditor xApp](https://github.com/5GSEC/MobiFlow-Auditor) is an O-RAN compliant xApp aiming to support fine-grained and security-aware statistics monitoring over the RAN data plane, which is not solved by the default O-RAN standard and service models. We abstract such telemetry streams as MobiFlow, a novel security audit trail for holding mobile devices accountable during the link and session setup protocols as they interact with the base station, and interval statistics generated for tracking large-scale patterns of abuse against the base station.
+
+
 ### MobieXpert xApp
 
-[The MobieXpert xApp](https://github.com/5GSEC/mobi-expert-xapp) functions as a L3 exploit detection engine that allows efficient programming of cellular attack signatures (**Source Code To Be Released**).
+[The MobieXpert xApp](https://github.com/5GSEC/mobi-expert-xapp) functions as an L3 exploit detection engine that allows efficient programming of cellular attack signatures (**Source Code To Be Released**).
 
 ## Build 5G-Spector from Scratch
 
