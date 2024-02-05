@@ -6,7 +6,7 @@
 
 5G-Spector has passed the NDSS'24 artifact evaluation and is awarded all badges (available, functional, and reproduced). Please checkout our [artifact](#reproducible-artifact) as a standalone VM! 
 
-If you would like to build 5G-Spector from scratch, we have also provided guidelines to download, build, and deploy 5G-Spector in a test 5G network. Please checkout this [guide](https://github.com/5GSEC/5G-Spector/wiki/Build-5G%E2%80%90Spector-from-scratch-in-an-OAI-5G-network)! 
+If you would like to build 5G-Spector from scratch, we have also provided guidelines to download, build, and deploy 5G-Spector in an experimental 5G network. Please checkout this [guide](https://github.com/5GSEC/5G-Spector/wiki/Build-5G%E2%80%90Spector-from-scratch-in-an-OAI-5G-network)! 
 
 [<img src="./figure/badge-AFR.png" width="150" />](./figure/badge-AFR.png)
 
