@@ -27,11 +27,10 @@ The below image shows the architecture of 5G-Spector's deployment. From a high l
 
 ### Control Plane 
 
-The control layer logic of O-RAN is disaggregated from the data plane based on the SDN principles. It further involves two main components:
-
-- **Near-Real-Time RAN Intelligent Controller (nRT-RIC)** serves as a proxy for
+The control layer logic of O-RAN is disaggregated from the data plane based on the SDN principles. It involves the **Near-Real-Time RAN Intelligent Controller (nRT-RIC)** serves as a proxy for
 control services and connects to the RAN nodes (i.e., CUs and DUs) via the standard E2 interface. Based on the nRT-RIC's services, xApps can be programmed as “plug-n-play” software on the control plane. We use ONF's [ONOS RIC](https://docs.onosproject.org/v0.6.0/onos-cli/docs/cli/onos_ric/) of its Software-Defined RAN ([SD-RAN](https://docs.sd-ran.org/master/index.html)) project as our nRT-RIC.
-- **MobieXpert xApp** is the first L3 cellular attack detection xApp. MobieXpert’s design is based on the Production-Based Expert System Toolset ([P-BEST](https://ieeexplore.ieee.org/document/766911)) language, which has been widely used for decades in stateful intrusion detection. With MobieXpert, network operators can program stateful production-based IDS rules for detecting a wide range of cellular L3 attacks.
+
+5G-Spector's analysis capability is powered by the novel security telemetry stream MobiFlow extracted by the **MobiFlow Auditor** xApp from the RAN data plane. MobiFlow supports sophisticated threat analysis such as the signature-based L3 attack detection within the **MobieXpert xApp**. 
 
 
 
@@ -50,7 +49,7 @@ control services and connects to the RAN nodes (i.e., CUs and DUs) via the stand
 
 ### MobieXpert xApp
 
-[The MobieXpert xApp](https://github.com/5GSEC/mobi-expert-xapp) functions as an L3 exploit detection engine that allows efficient programming of cellular attack signatures (**Source Code To Be Released**).
+[The MobieXpert xApp](https://github.com/5GSEC/MobieXpert) functions as an L3 exploit detection engine that allows efficient programming of cellular attack signatures. MobieXpert’s design is based on the Production-Based Expert System Toolset ([P-BEST](https://ieeexplore.ieee.org/document/766911)) language, which has been widely used for decades in stateful intrusion detection. With MobieXpert, network operators can program stateful production-based IDS rules for detecting a wide range of cellular L3 attacks.
 
 ## Build 5G-Spector from Scratch
 
