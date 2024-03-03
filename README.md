@@ -4,9 +4,11 @@
 
 5G-Spector is the first Open Radio Access Network ([O-RAN](https://www.o-ran.org/)) compliant layer-3 cellular attack detection service. It is based on the revolutionary O-RAN architecture that brings unprecedented programmability that enables stakeholders (e.g., network operators) and researchers to build innovative software-defined services on cellular networks. 5G-Spector is featured in project [SE-RAN](https://5gsec.com) and an academic publication in the Network and Distributed System Security Symposium 2024 ([NDSS 2024](https://www.ndss-symposium.org/ndss2024/)). The full paper is available [here](https://web.cse.ohio-state.edu/~wen.423/papers/5G-Spector-NDSS24.pdf).
 
-5G-Spector has passed the NDSS'24 artifact evaluation and is awarded all badges (available, functional, and reproduced). Please checkout our [artifact](#reproducible-artifact) as a standalone VM! 
+5G-Spector has passed the NDSS'24 artifact evaluation and is awarded all badges (available, functional, and reproduced).
 
-If you would like to build 5G-Spector from scratch, we have also provided guidelines to download, build, and deploy 5G-Spector in an experimental 5G network. Please checkout this [guide](https://github.com/5GSEC/5G-Spector/wiki/Build-5G%E2%80%90Spector-from-scratch-in-an-OAI-5G-network)! 
+(**RECOMMENDED**) If you would like to build 5G-Spector from scratch, we have also provided guidelines to download, build, and deploy 5G-Spector in an experimental 5G network (OAI). Please checkout this [guide](https://github.com/5GSEC/5G-Spector/wiki/Build-5G%E2%80%90Spector-from-scratch-in-an-OAI-5G-network)!
+
+We have also provided a standalone VM [artifact](#reproducible-artifact) with a built-in OAI LTE network and 5G-Spector.
 
 [<img src="./figure/badge-AFR.png" width="150" />](./figure/badge-AFR.png)
 
@@ -19,11 +21,10 @@ The below image shows the architecture of 5G-Spector's deployment. From a high l
 ### Data plane
 **Data Plane** involves the user equipment (UE) and Radio Access Network (RAN), and the core network (LTE EPC / 5GC). As shown in the figure, the RAN data plane can be further broken down into different components:
 
-- **Radio Unit (RU)** is the typical radio hardware deployed in the front-haul network to handle layer-1 (L1) physical radio signals from surrounding user equipment. In this artifact, it is replaced by the OpenAirInterface (OAI) **RF emulator** so that no hardware is required. Alternatively, OAI can also run on commodity software-defined radios (SDRs) over RF such as a [USRP B210](https://www.ettus.com/all-products/ub210-kit/).
+- **Radio Unit (RU)** is the typical radio hardware deployed in the front-haul network to handle layer-1 (L1) physical radio signals from surrounding user equipment. It is replaced by either a commodity SDR (e.g., [USRP B210](https://www.ettus.com/all-products/ub210-kit/)) or the OpenAirInterface (OAI) **RF emulator** (no actual SDR hardware required).
 - **Distributed Unit (DU)** and **Central Unit (CU)** are logical components that can be hosted at the edge to handle L2 and L3 functions of the cellular protocol. We use the state-of-the-art open-sourced implementation, [OpenAirInterface](https://gitlab.eurecom.fr/oai/openairinterface5g/), as the CU and DU. We further augment the CU and DU with SecSM Agent support that allows them to communicate with the control plane and MobieXpert xApp to report security telemetry, i.e., MobiFlow, to drive security analysis on the control plane.
-- **User Equipment (UE)** broadly refers to a cellular mobile device subscribed to the operational network. We also use OAI as the UE implementation which supports L1 emulation capability (i.e., no actual hardware required). Alternatively, OAI UE can also run on an SDR over RF. You can also use 5G compatible COTS smartphones as the UE.
-- **Core Network** is not shown in the image, and it handles network registration for the UEs. In this demonstration, we use ONF's Open Mobile Evolved Core (OMEC). 5G-Spector is also compatible with 5G SA networks with core implementation such as the [OAI 5GC](https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-fed/).
-	
+- **User Equipment (UE)** broadly refers to a cellular mobile device subscribed to the operational network. We also use OAI as the UE implementation which supports L1 emulation capability (i.e., no actual hardware required). Alternatively, OAI UE can also run on an SDR over RF. You can also use LTE / 5G compatible COTS smartphones as the UE.
+- **Core Network** is not shown in the image, and it handles network registration for the UEs. In this demonstration, we use either the [OAI 5GC](https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-fed/) or the ONF's Open Mobile Evolved Core (OMEC) for LTE.
 
 ### Control Plane 
 
@@ -31,7 +32,6 @@ The control layer logic of O-RAN is disaggregated from the data plane based on t
 control services and connects to the RAN nodes (i.e., CUs and DUs) via the standard E2 interface. Based on the nRT-RIC's services, xApps can be programmed as “plug-n-play” software on the control plane. We use ONF's [ONOS RIC](https://docs.onosproject.org/v0.6.0/onos-cli/docs/cli/onos_ric/) of its Software-Defined RAN ([SD-RAN](https://docs.sd-ran.org/master/index.html)) project as our nRT-RIC.
 
 5G-Spector's analysis capability is powered by the novel security telemetry stream MobiFlow extracted by the **MobiFlow Auditor** xApp from the RAN data plane. MobiFlow supports sophisticated threat analysis such as the signature-based L3 attack detection within the **MobieXpert xApp**. 
-
 
 
 ## Source Code Dependencies
@@ -44,7 +44,7 @@ control services and connects to the RAN nodes (i.e., CUs and DUs) via the stand
 
 ### MobiFlow Auditor xApp
 
-[The MobiFlow Auditor xApp](https://github.com/5GSEC/MobiFlow-Auditor) is an O-RAN compliant xApp aiming to support fine-grained and security-aware statistics monitoring over the RAN data plane, which is not solved by the default O-RAN standard and service models. We abstract such telemetry streams as MobiFlow, a novel security audit trail for holding mobile devices accountable during the link and session setup protocols as they interact with the base station, and interval statistics generated for tracking large-scale patterns of abuse against the base station.
+[The MobiFlow Auditor xApp](https://github.com/5GSEC/MobiFlow-Auditor) is an O-RAN compliant xApp aiming to support fine-grained and security-aware statistics monitoring over the RAN data plane, which does not exist in the default O-RAN standard and service models. We abstract such telemetry streams as MobiFlow, a novel security audit trail for holding mobile devices accountable during the link and session setup protocols as they interact with the base station, and interval statistics generated for tracking large-scale patterns of abuse against the base station.
 
 
 ### MobieXpert xApp
@@ -62,13 +62,10 @@ We have provided a guide to download, build, and deploy 5G-Spector in an experim
 We have provided a VM-based artifact to run and test 5G-Spector in a simulated LTE network with detailed instructions:
 [5G‐Spector Artifact in a Simulated LTE Network](https://github.com/5GSEC/5G-Spector/wiki/5G%E2%80%90Spector-Artifact-in-a-Simulated-LTE-Network).
 
-We have also finished integrating 5G-Spector into an OAI-based 5G SA network with ONOS RIC. We are planning to release a functional artifact of 5G-Spector for 5G SA in the future.
-
 
 ## Video Demonstration
 
 We have provided a [pre-recorded video](https://www.5gsec.com/post/5g-spector-demo) showing 5G-Spector's capability of detecting two over-the-air attacks targeting a real cellular network and devices.
-
 
 
 ## Learn More
