@@ -10,9 +10,9 @@
 
 ## Quick Start
 
-(**Recommended**) If you would like to build 5G-Spector from scratch, we have also provided guidelines to download, build, and deploy 5G-Spector in an experimental 5G network (OAI). Please checkout this [guide](https://github.com/5GSEC/5G-Spector/wiki/Build-5G%E2%80%90Spector-from-scratch-in-an-OAI-5G-network)!
+(**Recommended**) If you would like to build 5G-Spector from scratch, we have also provided guidelines to download, build, and deploy 5G-Spector in an experimental 5G network (OAI) with the [SD-RAN ONOS RIC](https://docs.onosproject.org/v0.6.0/onos-cli/docs/cli/onos_ric/). Please checkout this [guide](https://github.com/5GSEC/5G-Spector/wiki/Build-5G%E2%80%90Spector-from-scratch-in-an-OAI-5G-network)!
 
-(**Ongoing**) We are currently integrating 5G-Spector into the [O-RAN SC RIC](https://docs.o-ran-sc.org/en/latest/projects.html). We have released a preliminary guideline to deploy the OSC's near-RT / non-RT RIC and run 5G-Spector's major component on top. Please check out this [guide](https://github.com/5GSEC/OAI-5G-Docker/blob/master/O-RAN%20SC%20RIC%20Deployment%20Guide.md).
+(**Ongoing**) We are currently integrating 5G-Spector into the [O-RAN SC RIC](https://docs.o-ran-sc.org/en/latest/projects.html). We have released a preliminary guideline to deploy the OSC's near-RT / non-RT RIC and run 5G-Spector's major component on top. Please check out this [guide](https://github.com/5GSEC/OAI-5G-Docker/blob/master/O-RAN%20SC%20RIC%20Deployment%20Guide.md)!
 
 We have also provided a standalone VM [artifact](#reproducible-artifact) with a built-in OAI LTE network and 5G-Spector.
 
