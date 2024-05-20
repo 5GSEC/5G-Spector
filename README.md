@@ -56,12 +56,6 @@ control services and connects to the RAN nodes (i.e., CUs and DUs) via the stand
 
 [The MobieXpert xApp](https://github.com/5GSEC/MobieXpert) functions as an L3 exploit detection engine that allows efficient programming of cellular attack signatures. MobieXpert’s design is based on the Production-Based Expert System Toolset ([P-BEST](https://ieeexplore.ieee.org/document/766911)) language, which has been widely used for decades in stateful intrusion detection. With MobieXpert, network operators can program stateful production-based IDS rules for detecting a wide range of cellular L3 attacks.
 
-## Build 5G-Spector from Scratch
-
-We have provided a guide to download, build, and deploy 5G-Spector in an experimental OAI 5G test network. Please refer to:
-[Build 5G‐Spector from scratch in an OAI 5G network](https://github.com/5GSEC/5G-Spector/wiki/Build-5G%E2%80%90Spector-from-scratch-in-an-OAI-5G-network)
-
-
 ## Reproducible Artifact
 
 We have provided a VM-based artifact to run and test 5G-Spector in a simulated LTE network with detailed instructions:
