@@ -10,13 +10,16 @@
 
 ## Quick Start
 
-5G-Spector is based on open-sourced 5G and OpenRAN software implementations, in particular the [OpenAirInterface](https://gitlab.eurecom.fr/oai/openairinterface5g/) (OAI) project. Currently, you can instantiate and run an OAI-based 5G SA network from scratch with our extensions (optionally with the 5G-Spector components), which are interoperable with two different open-sourced near-RT RICs. Choose one of the following to get started:
+5G-Spector is based on open-sourced 5G and OpenRAN software implementations, in particular the [OpenAirInterface](https://gitlab.eurecom.fr/oai/openairinterface5g/) (OAI) project. First, you could instantiate and run an OAI-based 5G SA network (with RF simulation or SDRs) from scratch by folllowing our guides: [Deploy (O‐RAN Compliant) 5G Network based on OAI](https://github.com/5GSEC/5G-Spector/wiki/Deploy-(O%E2%80%90RAN-Compliant)-5G-Network-based-on-OAI). This guide uses an extended version of OAI implemented by us, which supports the communication of O-RAN nRT-RICs and the 5G-Spector components. After you have deployed a 5G network, you may choose from the following to deploy the nRT-RIC and deploy 5G-Spector:
 
 **Option 1**: [O-RAN SC RIC](https://docs.o-ran-sc.org/en/latest/projects.html). Please check out this [guide](https://github.com/5GSEC/5G-Spector/wiki/O%E2%80%90RAN-SC-RIC-Deployment-Guide)! (**Recommended**)
 
-**Option 2**: [ONOS RIC](https://docs.onosproject.org/v0.6.0/onos-cli/docs/cli/onos_ric/) within the SD-RAN project. Please check out this [guide](https://github.com/5GSEC/5G-Spector/wiki/Build-5G%E2%80%90Spector-from-scratch-in-an-OAI-5G-network)!
+**Option 2**: [ONOS RIC](https://docs.onosproject.org/v0.6.0/onos-cli/docs/cli/onos_ric/) within the SD-RAN project. Please check out this [guide](https://github.com/5GSEC/5G-Spector/wiki/Build-5G%E2%80%90Spector-from-scratch-in-an-OAI-5G-network)! (**NOT Recommended** since the ONOS SD-RAN RIC's support is no longer being maintained)
 
-**Option 3**: We have also provided a standalone VM [artifact](#reproducible-artifact) with a built-in OAI LTE network and 5G-Spector.
+## Reproducible Artifact
+
+We have provided a VM-based artifact to run and test 5G-Spector in a simulated LTE network with detailed instructions:
+[5G‐Spector Artifact in a Simulated LTE Network](https://github.com/5GSEC/5G-Spector/wiki/5G%E2%80%90Spector-Artifact-in-a-Simulated-LTE-Network). It is based on an OAI LTE network and the [ONOS SD-RAN RIC](https://docs.sd-ran.org/master/sdran-in-a-box/README.html).
 
 ## Architecture
 
@@ -56,11 +59,6 @@ control services and connects to the RAN nodes (i.e., CUs and DUs) via the stand
 ### MobieXpert xApp
 
 [The MobieXpert xApp](https://github.com/5GSEC/MobieXpert) functions as an L3 exploit detection engine that allows efficient programming of cellular attack signatures. MobieXpert’s design is based on the Production-Based Expert System Toolset ([P-BEST](https://ieeexplore.ieee.org/document/766911)) language, which has been widely used for decades in stateful intrusion detection. With MobieXpert, network operators can program stateful production-based IDS rules for detecting a wide range of cellular L3 attacks.
-
-## Reproducible Artifact
-
-We have provided a VM-based artifact to run and test 5G-Spector in a simulated LTE network with detailed instructions:
-[5G‐Spector Artifact in a Simulated LTE Network](https://github.com/5GSEC/5G-Spector/wiki/5G%E2%80%90Spector-Artifact-in-a-Simulated-LTE-Network).
 
 
 ## Video Demonstration
