@@ -10,7 +10,7 @@
 
 ## Quick Start
 
-5G-Spector is based on open-sourced 5G and OpenRAN software implementations, in particular the [OpenAirInterface](https://gitlab.eurecom.fr/oai/openairinterface5g/) (OAI) project. First, you could instantiate and run an OAI-based 5G SA network (with RF simulation or SDRs) from scratch by folllowing our guides: [Deploy (O‐RAN Compliant) 5G Network based on OAI](https://github.com/5GSEC/5G-Spector/wiki/Deploy-(O%E2%80%90RAN-Compliant)-5G-Network-based-on-OAI). This guide uses an extended version of OAI implemented by us, which supports the communication of O-RAN nRT-RICs and the 5G-Spector components. After you have deployed a 5G network, you may choose from the following to deploy the nRT-RIC and deploy 5G-Spector:
+5G-Spector is based on open-sourced 5G and OpenRAN software implementations, in particular the [OpenAirInterface](https://gitlab.eurecom.fr/oai/openairinterface5g/) (OAI) project. First, you could instantiate and run an OAI-based 5G SA network (with RF simulation or SDRs) from scratch by folllowing our guides: [Deploy (O‐RAN Compliant) 5G Network based on OAI](https://github.com/5GSEC/5G-Spector/wiki/Deploy-(O%E2%80%90RAN-Compliant)-5G-Networks-based-on-OAI). This guide uses an extended version of OAI implemented by us, which supports the communication of O-RAN nRT-RICs and the 5G-Spector components. After you have deployed a 5G network, you may choose from the following to deploy the nRT-RIC and deploy 5G-Spector:
 
 **Option 1**: [O-RAN SC RIC](https://docs.o-ran-sc.org/en/latest/projects.html). Please check out this [guide](https://github.com/5GSEC/5G-Spector/wiki/O%E2%80%90RAN-SC-RIC-Deployment-Guide)! (**Recommended**)
 
